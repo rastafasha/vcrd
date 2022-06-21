@@ -1,0 +1,44 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<qr-code class="code" *ngIf="display" [value]="vCardInfo" [size]="250"></qr-code>
+
+<form class="formb" [formGroup]="vcardForm" (submit)="formularioVcard()">
+
+
+    <input type="text" value="name" formControlName="name" placeholder="Nombre"><br>
+    <input type="text" value="surname" formControlName="surname" placeholder="Apellido"><br>
+    <input type="text" value="org" formControlName="org" placeholder="org"><br>
+    <input type="url" value="url" formControlName="url" placeholder="url"><br>
+    <input type="text" value="faceb" formControlName="faceb" placeholder="facebook"><br>
+    <input type="text" value="insta" formControlName="insta" placeholder="instagram"><br>
+    <input type="text" value="linked" formControlName="linked" placeholder="linkedin"><br>
+    <input type="text" value="twitt" formControlName="twitt" placeholder="twitter"><br>
+    <input type="email" value="email" formControlName="email" placeholder="email"><br>
+    <input type="text" value="photo" formControlName="photo" placeholder="photo"><br>
+    <input type="text" value="title" formControlName="title" placeholder="title"><br>
+
+    <textarea type="text" value="address" formControlName="address" placeholder="adress"></textarea><br>
+    <input type="tel" value="tel" formControlName="tel" placeholder="tel"><br>
+    <input type="tel" value="telhome" formControlName="telhome" placeholder="telhome"><br>
+    <input type="tel" value="telmovil" formControlName="telmovil" placeholder="telmovil"><br>
+    <input type="tel" value="telprincipal" formControlName="telprincipal" placeholder="telprincipal">
+
+
+    <button type="submit">Generate QR Code</button>
+</form>
+<!-- <p class="item">{{this.vcard.name}}</p>
+<p class="item">{{this.vcard.surname}}</p>
+<p class="item">{{this.vcard.org}}</p>
+<p class="item">{{this.vcard.url}}</p>
+<p class="item">{{this.vcard.faceb}}</p>
+<p class="item">{{this.vcard.insta}}</p>
+<p class="item">{{this.vcard.linked}}</p>
+<p class="item">{{this.vcard.twitt}}</p>
+<p class="item">{{this.vcard.email}}</p>
+<p class="item">{{this.vcard.photo}}</p>
+<p class="item">{{this.vcard.title}}</p>
+<p class="item">{{this.vcard.address}}</p>
+<p class="item">{{this.vcard.tel}}</p>
+<p class="item">{{this.vcard.telhome}}</p>
+<p class="item">{{this.vcard.telmovil}}</p>
+<p class="item">{{this.vcard.telprincipal}}</p> -->
+<a *ngIf="display" [href]="href" (click)="downloadImage()" download>Download Image</a>

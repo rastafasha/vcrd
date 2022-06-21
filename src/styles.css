@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+
+button {
+    padding: 10px;
+    background-color: skyblue;
+    margin-top: 10px;
+}
+
+input {
+    padding: 10px;
+    width: 80%;
+}
+
+a {
+    padding: 10px;
+    background-color: skyblue;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.formb {
+    display: grid;
+    /* grid-template-columns: repeat(5, 20%); */
+    grid-auto-flow: column;
+    grid-template-columns: max-content;
+    grid-template-rows: repeat(6, 12%);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 100%;
+}
+
+.item,
+input,
+.code {
+    display: flex;
+}
